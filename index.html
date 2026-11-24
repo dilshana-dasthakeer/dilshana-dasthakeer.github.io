@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f4f5f2; --surface:#ffffff; --ink:#16201d; --muted:#5b6a65; --line:#d9ded9;
-  --accent:#0f6b5a; --accent-soft:#dff0ea; --warn:#9a5b00;
+  --bg:#fafafa; --surface:#ffffff; --ink:#111111; --muted:#5f5f5f; --line:#e2e2e2;
+  --accent:#111111; --accent-soft:#efefef; --warn:#e8553d;
   --font-display:'Fraunces',Georgia,serif;
   --font-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --font-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -18,8 +18,8 @@
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --bg:#0f1715; --surface:#16211e; --ink:#e7eeea; --muted:#9db0a8; --line:#273632;
-    --accent:#52c9ac; --accent-soft:#12302a; --warn:#e0a24a; color-scheme:dark;
+    --bg:#0b0b0b; --surface:#141414; --ink:#f2f2f2; --muted:#a3a3a3; --line:#2b2b2b;
+    --accent:#f2f2f2; --accent-soft:#1f1f1f; --warn:#ff7a63; color-scheme:dark;
   }
 }
 *{box-sizing:border-box}
@@ -36,8 +36,8 @@ h3{font-size:1.05rem;font-weight:600}
 p{margin:0}
 header{padding:48px 0 28px}
 .eyebrow{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);margin-bottom:14px;display:flex;flex-wrap:wrap;gap:6px 16px}
-.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:.74rem;font-weight:500;padding:2px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
-.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:.74rem;font-weight:500;padding:2px 10px;border-radius:999px;background:var(--ink);color:var(--bg)}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:#ff6b4a}
 .role-line{font-size:1.15rem;color:var(--muted);margin-top:10px}
 .lede{max-width:65ch;margin-top:18px}
 .links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-weight:500}
@@ -86,7 +86,8 @@ footer .wrap{border-top:1px solid var(--line);padding-top:22px;display:flex;flex
     <p class="lede">I test enterprise software and build the automation that keeps releases safe. My day-to-day is Java, Selenium and Cucumber frameworks, REST API validation and SQL checks, and I use AI to find test gaps, build test cases and speed up automation.</p>
     <div class="links">
       <a href="https://github.com/dilshana-dasthakeer">GitHub</a>
-      <a href="https://linktr.ee/Dilshana6">Linktree</a>
+      <a href="https://linktr.ee/Dilshana6">Contact and links</a>
+      <a href="https://github.com/dilshana-dasthakeer/selenium-java-testng-framework/blob/main/docs/TEST_STRATEGY.md">How I test</a>
     </div>
     <div class="summary" role="list">
       <div role="listitem"><b>4+ yrs</b><span>Manual and automated QA</span></div>
@@ -189,7 +190,7 @@ footer .wrap{border-top:1px solid var(--line);padding-top:22px;display:flex;flex
 
 <footer>
   <div class="wrap">
-    <span>Dilshana Dasthakeer · Kandy, Sri Lanka</span>
+    <span>Dilshana Dasthakeer · Kandy, Sri Lanka · Get in touch through <a href="https://linktr.ee/Dilshana6">my links page</a></span>
     <span><a href="https://github.com/dilshana-dasthakeer">github.com/dilshana-dasthakeer</a> · <a href="https://linktr.ee/Dilshana6">linktr.ee/Dilshana6</a></span>
   </div>
 </footer>
