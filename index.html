@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dilshana Dasthakeer QA Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f5f2; --surface:#ffffff; --ink:#16201d; --muted:#5b6a65; --line:#d9ded9;
+  --accent:#0f6b5a; --accent-soft:#dff0ea; --warn:#9a5b00;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f1715; --surface:#16211e; --ink:#e7eeea; --muted:#9db0a8; --line:#273632;
+    --accent:#52c9ac; --accent-soft:#12302a; --warn:#e0a24a; color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{font-family:var(--font-display);font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.08;letter-spacing:-.01em}
+h2{font-family:var(--font-mono);font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);display:flex;gap:12px;align-items:center;margin-bottom:20px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+h3{font-size:1.05rem;font-weight:600}
+p{margin:0}
+header{padding:48px 0 28px}
+.eyebrow{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);margin-bottom:14px;display:flex;flex-wrap:wrap;gap:6px 16px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:.74rem;font-weight:500;padding:2px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.role-line{font-size:1.15rem;color:var(--muted);margin-top:10px}
+.lede{max-width:65ch;margin-top:18px}
+.links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-weight:500}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:34px}
+.summary div{background:var(--surface);padding:16px 18px;min-width:0}
+.summary b{display:block;font-family:var(--font-mono);font-size:1.25rem;font-weight:500;color:var(--accent)}
+.summary span{font-size:.85rem;color:var(--muted)}
+section{padding:30px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;min-width:0}
+.card h3{margin-bottom:10px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card h3 small{font-family:var(--font-mono);font-size:.7rem;font-weight:400;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-family:var(--font-mono);font-size:.78rem;padding:3px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.timeline{display:grid;gap:14px}
+.build{display:grid;grid-template-columns:150px 1fr;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.build .when{font-family:var(--font-mono);font-size:.78rem;color:var(--muted)}
+.build .when b{display:block;color:var(--accent);font-weight:500;margin-bottom:2px}
+.build .org{color:var(--muted);font-size:.92rem;margin:2px 0 10px}
+ul{margin:0;padding-left:1.1em}
+li{margin:4px 0;max-width:70ch}
+li::marker{color:var(--accent)}
+.case{display:grid;gap:8px}
+.case .id{font-family:var(--font-mono);font-size:.74rem;color:var(--warn)}
+.case p{color:var(--muted);font-size:.95rem}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.edu .card p{color:var(--muted);font-size:.93rem}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.certs div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:.92rem}
+.certs div small{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
+footer{padding:36px 0 56px;color:var(--muted);font-size:.9rem}
+footer .wrap{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media (max-width:640px){
+  .summary{grid-template-columns:repeat(2,1fr)}
+  .build{grid-template-columns:1fr;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow"><span class="pill">Open to opportunities</span><span>Kandy, Sri Lanka</span><span>Open to hybrid roles</span></div>
+    <h1>Dilshana Dasthakeer</h1>
+    <p class="role-line">Senior Software Quality Assurance Engineer</p>
+    <p class="lede">I test enterprise software and build the automation that keeps releases safe. My day-to-day is Java, Selenium and Cucumber frameworks, REST API validation and SQL checks, and I use AI to find test gaps, build test cases and speed up automation.</p>
+    <div class="links">
+      <a href="https://github.com/dilshana-dasthakeer">GitHub</a>
+      <a href="https://linktr.ee/Dilshana6">Linktree</a>
+    </div>
+    <div class="summary" role="list">
+      <div role="listitem"><b>4+ yrs</b><span>Manual and automated QA</span></div>
+      <div role="listitem"><b>BDD</b><span>Java, Selenium, Cucumber</span></div>
+      <div role="listitem"><b>CTFL 4.0</b><span>ISTQB certified, 2024</span></div>
+      <div role="listitem"><b>MSc CS</b><span>University of Peradeniya</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<section aria-labelledby="skills">
+  <h2 id="skills">Test suites: skills</h2>
+  <div class="grid">
+    <div class="card"><h3>Automation <small>core</small></h3><div class="tags"><span>Java</span><span>Selenium WebDriver</span><span>Playwright</span><span>TypeScript</span><span>Maven</span><span>Cucumber (BDD)</span><span>TestNG</span><span>Katalon Studio</span><span>Page Object Model</span><span>Framework design</span></div></div>
+    <div class="card"><h3>AI-assisted testing <small>new</small></h3><div class="tags"><span>Test gap analysis</span><span>Test case building</span><span>Automation scripts</span></div></div>
+    <div class="card"><h3>API and data</h3><div class="tags"><span>Rest Assured</span><span>Postman</span><span>SoapUI</span><span>SQL (MySQL, Oracle)</span><span>REST validation</span></div></div>
+    <div class="card"><h3>Process</h3><div class="tags"><span>Agile Scrum</span><span>SDLC</span><span>STLC</span><span>BDD</span><span>TDD</span><span>Defect triage</span></div></div>
+    <div class="card"><h3>Tools</h3><div class="tags"><span>Jira</span><span>Jenkins (CI/CD)</span><span>Git</span><span>AWS</span><span>IntelliJ IDEA</span></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="exp">
+  <h2 id="exp">Build history: experience</h2>
+  <div class="timeline">
+    <article class="build">
+      <div class="when"><b>Aug 2024 to now</b>Current</div>
+      <div>
+        <h3>Senior Software Quality Assurance Engineer</h3>
+        <p class="org">CodeGen International (Pvt) Ltd</p>
+        <ul>
+          <li>Lead a QA team that resolves client-reported issues on time, keeping client satisfaction high.</li>
+          <li>Develop and maintain BDD automation frameworks in Java, Selenium and Cucumber that connect business requirements to technical tests.</li>
+          <li>Use AI to analyse coverage and find test gaps, build test cases from requirements and generate automation scripts.</li>
+          <li>Drive QREST-focused testing, including RESTful API validation and advanced automation scripting.</li>
+          <li>Spot release risks early and put mitigations in place so delivery stays on time.</li>
+          <li>Mentor junior and mid-level QA engineers on QA best practice.</li>
+        </ul>
+      </div>
+    </article>
+    <article class="build">
+      <div class="when"><b>Feb 2023 to Aug 2024</b>1 yr 6 mo</div>
+      <div>
+        <h3>Software Quality Assurance Engineer</h3>
+        <p class="org">CodeGen International (Pvt) Ltd</p>
+        <ul>
+          <li>Executed and documented test cases across enterprise scenarios.</li>
+          <li>Tracked and triaged bugs with developers in Jira and kept stakeholders informed.</li>
+          <li>Ran exploratory testing each sprint to find edge cases in enterprise systems.</li>
+        </ul>
+      </div>
+    </article>
+    <article class="build">
+      <div class="when"><b>Aug 2022 to Feb 2023</b>6 mo</div>
+      <div>
+        <h3>Associate Software Quality Assurance Engineer</h3>
+        <p class="org">CodeGen International (Pvt) Ltd</p>
+        <ul>
+          <li>Took part in sprint planning and helped write test strategy and test plans.</li>
+          <li>Ran smoke and regression tests, using SQL for database checks and data setup.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="work">
+  <h2 id="work">Test cases: selected work</h2>
+  <div class="grid">
+    <article class="card case"><span class="id">CASE 01</span><h3>Selenium Java framework</h3><p>Selenium 4, Java 17 and TestNG framework with the Page Object Model, retry handling, JSON data providers, Docker Selenium Grid and parallel Chrome and Firefox runs. CI publishes an Allure report on every push.</p><p><a href="https://github.com/dilshana-dasthakeer/selenium-java-testng-framework">Source on GitHub</a> · <a href="https://dilshana-dasthakeer.github.io/selenium-java-testng-framework/">Live Allure report</a></p></article>
+    <article class="card case"><span class="id">CASE 02</span><h3>Playwright and TypeScript framework</h3><p>Playwright and TypeScript framework with fixtures, a saved login session, typed API tests with automatic cleanup, and a CI matrix across chromium, firefox, webkit and mobile.</p><p><a href="https://github.com/dilshana-dasthakeer/playwright-typescript-framework">Source on GitHub</a></p></article>
+    <article class="card case"><span class="id">CASE 03</span><h3>BDD automation at work</h3><p>Java, Selenium and Cucumber frameworks that turn business requirements into readable, runnable scenarios for enterprise software.</p></article>
+    <article class="card case"><span class="id">CASE 04</span><h3>Comfy Baby website QA</h3><p>Masters project. Wrote test plans, ran system and acceptance tests and found critical bugs before launch, using Selenium and Postman for functional and API testing.</p></article>
+    <article class="card case"><span class="id">CASE 05</span><h3>QA best practices session</h3><p>Recorded a video session on testing methods and automation techniques, shared with students and professionals at Moratuwa University.</p></article>
+    <article class="card case"><span class="id">CASE 06</span><h3>Hate speech detection study</h3><p>Literature review and case study on detecting hate speech in social media, covering NLP algorithms and the ethics of content moderation.</p></article>
+  </div>
+</section>
+
+<section aria-labelledby="edu">
+  <h2 id="edu">Environment: education</h2>
+  <div class="edu">
+    <div class="card"><h3>Master of Computer Science</h3><p>Postgraduate Institute of Science, University of Peradeniya, 2022 to 2024. GPA 3.31. Focus on natural language processing, machine learning and software engineering.</p></div>
+    <div class="card"><h3>BSc in Information Technology</h3><p>Vavuniya Campus, University of Jaffna, 2018 to 2021. GPA 3.49. Projects: an attendance and grading system, and face-recognition attendance.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="certs">
+  <h2 id="certs">Certifications</h2>
+  <div class="certs">
+    <div>ISTQB Certified Tester, Foundation Level v4.0<small>ISTQB, 2024</small></div>
+    <div>Professional Skills: Delivering Service Excellence<small>British Council, Sep 2024</small></div>
+    <div>The Fundamentals of Digital Marketing<small>Google, 2021</small></div>
+    <div>Introduction to Cybersecurity<small>Cisco Networking Academy, 2020</small></div>
+    <div>Introduction to Packet Tracer<small>Cisco Networking Academy, 2020</small></div>
+    <div>IEEE Xtreme 14.0 Programming<small>IEEE 24-hour competition</small></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Dilshana Dasthakeer · Kandy, Sri Lanka</span>
+    <span><a href="https://github.com/dilshana-dasthakeer">github.com/dilshana-dasthakeer</a> · <a href="https://linktr.ee/Dilshana6">linktr.ee/Dilshana6</a></span>
+  </div>
+</footer>
+</body>
+</html>
