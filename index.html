@@ -6,70 +6,68 @@
 <title>Dilshana Dasthakeer QA Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fafafa; --surface:#ffffff; --ink:#111111; --muted:#5f5f5f; --line:#e2e2e2;
-  --accent:#111111; --accent-soft:#efefef; --warn:#e8553d;
-  --font-display:'Fraunces',Georgia,serif;
-  --font-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --font-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --bg:#faf3ec; --surface:#fffaf5; --ink:#3a2922; --muted:#7b6358; --line:#ecd9cb;
+  --accent:#b5644c; --accent-dark:#9a4f39; --accent-soft:#f3e1d5;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
   color-scheme:light;
-}
-@media (prefers-color-scheme:dark){
-  :root{
-    --bg:#0b0b0b; --surface:#141414; --ink:#f2f2f2; --muted:#a3a3a3; --line:#2b2b2b;
-    --accent:#f2f2f2; --accent-soft:#1f1f1f; --warn:#ff7a63; color-scheme:dark;
-  }
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+body{margin:0;color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.65;
+  background:linear-gradient(180deg,#fbf5ee 0%,#f7e9de 55%,#efd3c3 100%);background-attachment:fixed}
+a{color:var(--accent-dark);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px}
 h1,h2,h3{text-wrap:balance;margin:0}
-h1{font-family:var(--font-display);font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.08;letter-spacing:-.01em}
-h2{font-family:var(--font-mono);font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);display:flex;gap:12px;align-items:center;margin-bottom:20px}
-h2::after{content:"";flex:1;height:1px;background:var(--line)}
+h1{font-family:var(--font-display);font-weight:600;text-transform:uppercase;font-size:clamp(2.8rem,9vw,5.2rem);line-height:.98;letter-spacing:.01em;color:var(--accent)}
+h2{font-family:var(--font-display);font-weight:600;font-size:1.7rem;text-transform:uppercase;letter-spacing:.06em;text-align:center;margin-bottom:26px}
 h3{font-size:1.05rem;font-weight:600}
 p{margin:0}
-header{padding:48px 0 28px}
-.eyebrow{font-family:var(--font-mono);font-size:.8rem;color:var(--muted);margin-bottom:14px;display:flex;flex-wrap:wrap;gap:6px 16px}
-.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:.74rem;font-weight:500;padding:2px 10px;border-radius:999px;background:var(--ink);color:var(--bg)}
-.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:#ff6b4a}
-.role-line{font-size:1.15rem;color:var(--muted);margin-top:10px}
-.lede{max-width:65ch;margin-top:18px}
-.links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-weight:500}
-.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:34px}
-.summary div{background:var(--surface);padding:16px 18px;min-width:0}
-.summary b{display:block;font-family:var(--font-mono);font-size:1.25rem;font-weight:500;color:var(--accent)}
+header{padding:56px 0 30px}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:.74rem;letter-spacing:.1em;padding:4px 14px;border-radius:999px;background:var(--accent-soft);color:var(--accent-dark)}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.role-line{font-size:1.15rem;color:var(--muted);margin-top:14px}
+.lede{max-width:56ch;margin-top:18px}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:11px 26px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--accent)}
+.btn:hover{background:var(--accent-dark)}
+.btn.ghost{background:transparent;color:var(--accent-dark)}
+.btn.ghost:hover{background:var(--accent-soft)}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
+.summary div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;min-width:0;box-shadow:0 6px 18px rgba(120,70,45,.07)}
+.summary b{display:block;font-family:var(--font-display);font-size:1.7rem;font-weight:600;color:var(--accent)}
 .summary span{font-size:.85rem;color:var(--muted)}
-section{padding:30px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;min-width:0}
-.card h3{margin-bottom:10px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
-.card h3 small{font-family:var(--font-mono);font-size:.7rem;font-weight:400;color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tags span{font-family:var(--font-mono);font-size:.78rem;padding:3px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
-.timeline{display:grid;gap:14px}
-.build{display:grid;grid-template-columns:150px 1fr;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
-.build .when{font-family:var(--font-mono);font-size:.78rem;color:var(--muted)}
-.build .when b{display:block;color:var(--accent);font-weight:500;margin-bottom:2px}
+section{padding:34px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 24px;min-width:0;box-shadow:0 6px 18px rgba(120,70,45,.07)}
+.card h3{margin-bottom:12px;display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-family:var(--font-display);font-size:1.35rem;font-weight:600}
+.card h3 small{font-family:var(--font-body);font-size:.68rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{font-size:.8rem;padding:4px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.timeline{display:grid;gap:18px}
+.build{display:grid;grid-template-columns:160px 1fr;gap:22px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 6px 18px rgba(120,70,45,.07)}
+.build .when{font-size:.8rem;color:var(--muted)}
+.build .when b{display:block;color:var(--accent);font-weight:600;margin-bottom:2px;letter-spacing:.04em}
+.build h3{font-family:var(--font-display);font-size:1.4rem;font-weight:600}
 .build .org{color:var(--muted);font-size:.92rem;margin:2px 0 10px}
 ul{margin:0;padding-left:1.1em}
-li{margin:4px 0;max-width:70ch}
+li{margin:5px 0;max-width:70ch}
 li::marker{color:var(--accent)}
 .case{display:grid;gap:8px}
-.case .id{font-family:var(--font-mono);font-size:.74rem;color:var(--warn)}
+.case .id{font-size:.72rem;letter-spacing:.14em;color:var(--accent)}
 .case p{color:var(--muted);font-size:.95rem}
-.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
 .edu .card p{color:var(--muted);font-size:.93rem}
-.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
-.certs div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:.92rem}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.certs div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:.92rem}
 .certs div small{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
-footer{padding:36px 0 56px;color:var(--muted);font-size:.9rem}
-footer .wrap{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem;text-align:center}
+footer .wrap{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px}
 @media (max-width:640px){
   .summary{grid-template-columns:repeat(2,1fr)}
   .build{grid-template-columns:1fr;gap:8px}
@@ -85,9 +83,9 @@ footer .wrap{border-top:1px solid var(--line);padding-top:22px;display:flex;flex
     <p class="role-line">Senior Software Quality Assurance Engineer</p>
     <p class="lede">I test enterprise software and build the automation that keeps releases safe. My day-to-day is Java, Selenium and Cucumber frameworks, REST API validation and SQL checks, and I use AI to find test gaps, build test cases and speed up automation.</p>
     <div class="links">
-      <a href="https://github.com/dilshana-dasthakeer">GitHub</a>
-      <a href="https://linktr.ee/Dilshana6">Contact and links</a>
-      <a href="https://github.com/dilshana-dasthakeer/selenium-java-testng-framework/blob/main/docs/TEST_STRATEGY.md">How I test</a>
+      <a class="btn" href="https://github.com/dilshana-dasthakeer">View GitHub</a>
+      <a class="btn ghost" href="https://linktr.ee/Dilshana6">Contact and links</a>
+      <a class="btn ghost" href="https://github.com/dilshana-dasthakeer/selenium-java-testng-framework/blob/main/docs/TEST_STRATEGY.md">How I test</a>
     </div>
     <div class="summary" role="list">
       <div role="listitem"><b>4+ yrs</b><span>Manual and automated QA</span></div>
